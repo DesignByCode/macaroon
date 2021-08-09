@@ -1,5 +1,6 @@
 import React from 'react'
-import Highlight from 'react-highlight'
+import Highlight, { defaultProps } from 'prism-react-renderer'
+import theme from 'prism-react-renderer/themes/nightOwl'
 
 const Home = () => {
   return (
@@ -12,7 +13,9 @@ const Home = () => {
           </div>
         </div>
         <div className="md-col-12">
-          <h1 className={`font--size-hey font--weight-900 m-0 mb-2 txt--purple`}>Macaroon</h1>
+          <h1 className={`font--size-hey font--weight-900 m-0 mb-2 txt--purple`}>
+            Macaroon<small className="font--size-xl font--weight-200">.css</small>
+          </h1>
           <h2 className={`font--size-xl font--weight-200 m-0 txt--gray-700`}>Build with new sass features.</h2>
           <h3 className={`font--size-lg font--weight-400 txt--purple-400 m-0 mb-5`}>
             Macaroon is a experimental css framework using the latest sass features. 🎉
@@ -42,7 +45,19 @@ const Home = () => {
           </div>
         </div>
         <div className="md-col-12">
-          <Highlight>npm i macaroon</Highlight>
+          <Highlight {...defaultProps} theme={theme} code={`npm i macaroon.css`} language="bash">
+            {({ className, style, tokens, getLineProps, getTokenProps }) => (
+              <pre className={className} style={style}>
+                {tokens.map((line, i) => (
+                  <div {...getLineProps({ line, key: i })}>
+                    {line.map((token, key) => (
+                      <span {...getTokenProps({ token, key })} />
+                    ))}
+                  </div>
+                ))}
+              </pre>
+            )}
+          </Highlight>
         </div>
       </div>
     </div>

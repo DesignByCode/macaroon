@@ -1,4 +1,4 @@
-# MACAROON
+# MACAROON.css
 
 [![npm version](https://badge.fury.io/js/macaroon.css.svg)](https://badge.fury.io/js/macaroon.css)
 [![GitHub stars](https://img.shields.io/github/stars/DesignByCode/macaroon)](https://github.com/DesignByCode/macaroon/stargazers)
