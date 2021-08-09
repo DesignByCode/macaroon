@@ -1,11 +1,11 @@
 # MACAROON
 
-[![npm version](https://badge.fury.io/js/macaroon.svg)](https://badge.fury.io/js/macaroon)
+[![npm version](https://badge.fury.io/js/macaroon.css.svg)](https://badge.fury.io/js/macaroon.css)
 [![GitHub stars](https://img.shields.io/github/stars/DesignByCode/macaroon)](https://github.com/DesignByCode/macaroon/stargazers)
 [![GitHub license](https://img.shields.io/github/license/DesignByCode/macaroon)](https://github.com/DesignByCode/macaroon)
 [![GitHub issues](https://img.shields.io/github/issues/DesignByCode/macaroon)](https://github.com/DesignByCode/macaroon/issues)
 
-[![NPM](https://nodei.co/npm/macaroon.png?compact=true)](https://npmjs.org/package/macaroon)
+[![NPM](https://nodei.co/npm/macaroon.css.png?compact=true)](https://npmjs.org/package/macaroon.css)
 
 ## Index
 
@@ -20,13 +20,13 @@
 Install via npm package manager
 
 ```bash
-npm i macaroon
+npm i macaroon.css
 ```
 
 Install via yarn package manager
 
 ```bash
-yarn add macaroon
+yarn add macaroon.css
 ```
 
 ## Setup Framework

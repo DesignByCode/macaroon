@@ -1,5 +1,5 @@
 {
-  "name": "macaroon",
+  "name": "macaroon.css",
   "version": "1.0.0-alpha.0",
   "scripts": {
     "dev": "next dev",
