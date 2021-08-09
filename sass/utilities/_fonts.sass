@@ -1,0 +1,19 @@
+
+@use "../config"
+@use "../functions"
+@use "../mixins"
+
+
+.font
+  @each $key, $value in (functions.deep-get(config.$font, 'sizes'))
+    &--size-#{$key}
+      @each $var, $varVal in $value
+        #{$var}: #{$varVal}
+
+  @each $key, $value in (functions.deep-get(config.$font, 'height'))
+    &--lh-#{$key}
+      line-height: $value
+
+  @each $val in (functions.deep-get(config.$font, 'weight'))
+    &--weight-#{$val}
+      font-weight: $val

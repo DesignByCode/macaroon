@@ -1,0 +1,51 @@
+@use "config"
+@use "sass:map"
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')
+$colors: config.$colors
+$border-steps: 20 !default
+
+$nav_breakpoint: 800px
+
+\:root
+  // Fonts heading
+  --heading-fonts:  'Roboto', sans-serif
+  --heading-font-weight: 700
+  --heading-color: #444
+
+  --body-fonts:  'Roboto', sans-serif
+  --body-font-size: 1rem
+  --body-font-weight: 400
+  --body-color: #444
+  --body-selection-bg: var(--purple-100)
+  --body-selection-txt: var(--purple-300)
+
+  // Global body styles
+  //--body-margin-top: 60px
+  --body-bg-color: var(--gray-100)
+  --body-line-height: 1.48
+  // Main navigation
+  --nav-bg-color: var(--purple)
+  --nav-brand-color: #fff
+  --nav-brand-size: 22px
+  --nav-breakpoint: 900px
+  --nav-height: 60px
+  --nav-padding: 0
+  // Navigation Links
+  --nav-link-border-radius: 4px
+  --nav-link-bg: transparent
+  --nav-link-txt: var(--purple-100)
+  --nav-link-bg-hover: var(--purple-600)
+  --nav-link-txt-hover: var(--gray-100)
+  --nav-link-height: var(--nav-height)
+  // Navigation toggle
+  --nav-toggle-border-style: 2px solid var(--ceruran-100)
+  --nav-toggle-radius: 4px
+
+
+  // Panel
+  --panel-bg-color: #fff
+  --panel-color: #444
+  --panel-padding: 12px
+
+

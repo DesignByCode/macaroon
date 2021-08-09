@@ -1,0 +1,26 @@
+
+@use "../config"
+@use "sass:map"
+@use "sass:math"
+@use "../functions"
+
+=media-up($name)
+    $size: ''
+    @if (map.has-key(functions.deep-get(config.$grid, 'breakpoints'), $name))
+        $size: map.get(functions.deep-get(config.$grid, 'breakpoints'), $name)
+    @else
+        $size: $name
+    @media screen and (min-width: $size)
+        @content
+
+
+=media-down($name)
+    $size: ''
+    @if (map.has-key(functions.deep-get(config.$grid, 'breakpoints'), $name))
+        $size: map.get(functions.deep-get(config.$grid, 'breakpoints'), $name)
+    @else
+        $size: $name
+    @media screen and (max-width: $size)
+        @content
+
+

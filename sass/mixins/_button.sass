@@ -1,0 +1,23 @@
+@use "sass:color"
+
+=buttons($colors)
+	@each $color, $shades in $colors
+		@each $key, $value in $shades
+			@if $key == DEFAULT
+				&--#{$color},
+				&--#{$color}\:hover:hover
+					background-color: var(--#{$color})
+					@if color.blackness($value) > 15%
+						color: var(--white)
+					@else
+						color: var(--black)
+
+			@else
+				&--#{$color}-#{$key},
+				&--#{$color}-#{$key}\:hover:hover
+					background-color: var(--#{$color}-#{$key})
+					@if color.blackness($value) > 15%
+						color: var(--white)
+					@else
+						color: var(--black)
+

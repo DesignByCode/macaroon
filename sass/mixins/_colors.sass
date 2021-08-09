@@ -1,0 +1,9 @@
+
+
+=color-loop($colors)
+	@each $color, $shades in $colors
+		@each $key, $value in $shades
+			@if $key == DEFAULT
+				--#{$color}: #{$value}
+			@else
+				--#{$color}-#{$key}: #{$value}

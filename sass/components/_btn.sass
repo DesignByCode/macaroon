@@ -1,0 +1,45 @@
+@use "../../sass/theme"
+@use "../../sass/functions"
+@use "../../sass/config"
+@use "../../sass/mixins"
+@use "sass:math"
+
+.btn
+  margin: 0
+  padding: 0 1.0rem
+  //height: 2rem
+  line-height: 2rem
+  border-radius: 4px
+  background-color: var(--gray-100)
+  color: var(--gray-600)
+  box-shadow: 0 2px 4px 0 rgba(0,0,0 , 0.15)
+  cursor: pointer
+  display: inline-flex
+  text-decoration: none
+  border: solid 1px transparent
+
+  &:hover
+    //transform: scale(1.05)
+
+  &:not(:last-child)
+    margin-right: math.div(functions.deep-get(config.$grid, 'padding'), 2)
+
+  &--xs
+    padding: 0 0.5rem
+    line-height: 1.25rem
+    font-size: 75%
+
+  &--sm
+    padding: 0 0.75rem
+    line-height: 1.5rem
+
+  &--lg
+    padding: 0 1.75rem
+    line-height: 2.5rem
+
+  &--xl
+    padding: 0 2.25rem
+    line-height: 3rem
+
+
+  +mixins.buttons(config.$colors)

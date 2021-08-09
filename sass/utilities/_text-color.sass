@@ -1,0 +1,12 @@
+@use "../../sass/theme"
+
+@each $color, $shades in theme.$colors
+	@each $key, $value in $shades
+		@if $key == DEFAULT
+			.txt--#{$color},
+			.txt--#{$color}\:hover:hover
+				color: var(--#{$color})
+		@else
+			.txt--#{$color}-#{$key},
+			.txt--#{$color}-#{$key}\:hover:hover
+				color: var(--#{$color}-#{$key})

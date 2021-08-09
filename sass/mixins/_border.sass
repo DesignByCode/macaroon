@@ -1,0 +1,17 @@
+@use "sass:color"
+
+=borders($colors)
+  @each $color, $shades in $colors
+    @each $key, $value in $shades
+      @if $key == DEFAULT
+        &--#{$color},
+        &--#{$color}-hover:hover
+          border-width: 1px
+          border-color: var(--#{$color})
+          border-style: solid
+      @else
+        &--#{$color}-#{$key},
+        &--#{$color}-#{$key}-hover:hover
+          border-width: 1px
+          border-color: var(--#{$color}-#{$key})
+          border-style: solid

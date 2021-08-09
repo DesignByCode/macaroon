@@ -1,0 +1,14 @@
+
+$grid: (
+	columns: 12,
+	width_max: 1140px,
+	breakpoints: (
+		xs: 300px,
+		sm: 480px,
+		md: 800px,
+		lg: 960px,
+		xl: 1140px
+	),
+	nav_breackpoint: 800px,
+	padding: 12px
+)
