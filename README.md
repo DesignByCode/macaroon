@@ -1,4 +1,6 @@
 # MACAROON.css
+Macaroon is an experimental sass-framework using the latest sass features. 
+> __Only supported with Dart-Sass__
 
 [![npm version](https://badge.fury.io/js/macaroon.css.svg)](https://badge.fury.io/js/macaroon.css)
 [![GitHub stars](https://img.shields.io/github/stars/DesignByCode/macaroon)](https://github.com/DesignByCode/macaroon/stargazers)
@@ -37,7 +39,7 @@ The framework is created using sass. To use it you need to set up you sass envir
 lines of code to the file.
 
 ```sass
-@use "~macaroon/sass/init"
+@use "~macaroon.css/sass/init"
 ```
 
 ## Override Defaults
@@ -48,7 +50,7 @@ to it.
 Now you can override the theme colors and grid sizes to your need
 
 ```sass
-@use "~macaroon/sass/init"
+@use "~macaroon.css/sass/init"
 @use "theme"
 ```
 
@@ -59,8 +61,8 @@ add it before your **macaroon**
 imports.
 
 ```sass
+@use "~macaroon.css/src/sass/init"
 @use "theme"
-@use "~macaroon/src/sass/init"
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap')
 ```
 
