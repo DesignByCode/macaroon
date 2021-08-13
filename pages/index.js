@@ -1,6 +1,5 @@
 import React from 'react'
-import Highlight, { defaultProps } from 'prism-react-renderer'
-import theme from 'prism-react-renderer/themes/nightOwl'
+import CodeEditor from '../components/CodeEditor'
 
 const Home = () => {
   return (
@@ -36,7 +35,7 @@ const Home = () => {
             <a href="#" className="btn btn--purple btn--purple-600:hover">
               Button hover
             </a>
-            <a href="#" className="btn btn--lg btn--purple btn--purple-600:hover">
+            <a href="#" className="btn btn--lg btn--purple focus--purple btn--purple-600:hover">
               large
             </a>
             <a href="#" className="btn btn--xl btn--purple btn--purple-600:hover">
@@ -45,19 +44,29 @@ const Home = () => {
           </div>
         </div>
         <div className="md-col-12">
-          <Highlight {...defaultProps} theme={theme} code={`npm i macaroon.css`} language="bash">
-            {({ className, style, tokens, getLineProps, getTokenProps }) => (
-              <pre className={className} style={style}>
-                {tokens.map((line, i) => (
-                  <div {...getLineProps({ line, key: i })}>
-                    {line.map((token, key) => (
-                      <span {...getTokenProps({ token, key })} />
-                    ))}
-                  </div>
-                ))}
-              </pre>
-            )}
-          </Highlight>
+          <CodeEditor>npm i macaroon.css</CodeEditor>
+        </div>
+
+        <div className="form__group">
+          <label htmlFor="name" className="form__label">
+            NAME:
+          </label>
+          <input type="text" id="name" className="form__item focus--gray-200" />
+        </div>
+        <div className="form__group">
+          <label htmlFor="email" className="form__label">
+            EMAIL:
+          </label>
+          <input type="text" id="email" className="form__item  focus--blue-50" />
+        </div>
+        <div className="form__group">
+          <label htmlFor="password" className="form__label">
+            PASSWORD:
+          </label>
+          <div className="form__wrap">
+            <input type="text" id="password" className="form__item focus--pink-50" />
+            <button className="btn btn--purple">Button</button>
+          </div>
         </div>
       </div>
     </div>

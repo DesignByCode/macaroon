@@ -23,7 +23,7 @@ const NavBar = () => {
               </Link>
             </li>
             <li className="nav__link">
-              <Link href={`/`}>
+              <Link href={`/docs`}>
                 <a>DOCUMENTATION</a>
               </Link>
             </li>

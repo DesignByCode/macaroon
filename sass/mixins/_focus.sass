@@ -1,0 +1,15 @@
+@use "sass:color"
+
+=focus($colors)
+  @each $color, $shades in $colors
+    @each $key, $value in $shades
+      @if $key == DEFAULT
+        .focus--#{$color}:focus
+          border: solid 1px var(--#{$color})
+          box-shadow: var(--#{$color}) 0 0 0.75rem
+          outline: none
+      @else
+        .focus--#{$color}-#{$key}:focus
+          border: solid 1px var(--#{$color}-#{$key})
+          box-shadow: var(--#{$color}-#{$key}) 0 0 0.75rem
+          outline: none
